@@ -49,7 +49,8 @@ function Lib({ data, setFocus, setData, oldData, setOldData }) {
           <div><span>Отсортировать по количеству библиотек</span>
             <button onClick={() => { sortElMax() }}>&#9650;</button>
             <button onClick={() => { sortElMin() }}>&#9660;</button>
-            <button onClick={() => { setData(oldData) }}>Все</button>
+            <span>Показать начальные данные</span>
+            <button onClick={() => { setData(oldData) }}>Показать</button>
           </div>
           <div><span>Введите регион</span>
             <input onChange={inputChange} value={word} />
