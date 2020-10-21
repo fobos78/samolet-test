@@ -1,0 +1,12 @@
+.Home{
+  width: 99%;
+  height: 100hv;
+  border: 1px solid black;
+  border-radius: 3px;
+  background-color: bisque;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}

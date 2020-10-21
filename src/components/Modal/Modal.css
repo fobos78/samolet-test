@@ -1,0 +1,14 @@
+.Modal{
+  left: calc(50% - 450px);
+  width: 900px;
+  height: 100hv;
+  background-color: aquamarine;
+  border: 1px solid black;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 5px;
+  position: fixed;
+}

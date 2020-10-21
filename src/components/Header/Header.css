@@ -1,0 +1,22 @@
+.Header{
+  width: 99%;
+  height: 80px;
+  border: 1px solid black;
+  border-radius: 3px;
+  color: white;
+  background-color: aquamarine;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px;
+}
+.focus{
+  width: 100px;
+  height: 80px;
+  /* padding: 10px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: darkcyan;
+  color: white;
+}
