@@ -68,7 +68,7 @@ function Lib({ data, setFocus, setData, oldData, setOldData }) {
             }</h3>
             <button onClick={() => { setModal(true); setIndex(i) }}>Подробнее</button>
           </div>
-        )}
+        ) || <div class="loader">Loading...</div> }
 
         {/* <pre>
         {JSON.stringify(data, null, 2)}
