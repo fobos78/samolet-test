@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import Modal from '../Modal';
 import './Lib.css';
 
-function Lib({ data, setFocus, setData }) {
+function Lib({ data, setFocus, setData, oldData, setOldData }) {
   const [modal, setModal] = useState(false);
   const [index, setIndex] = useState(0);
   const [word, setWord] = useState('');
@@ -27,7 +27,7 @@ function Lib({ data, setFocus, setData }) {
   function inputChange(event) {
     let newWord = event.target.value;
     setWord(event.target.value);
-    console.log('word1', newWord);
+    console.log('oldData', oldData);
     clearTimeout(timer);
     timer = setTimeout(() => {
       const str = JSON.stringify(data);
@@ -38,7 +38,6 @@ function Lib({ data, setFocus, setData }) {
       if (newArr[0]) {
         setData(newArr);
       }
-      // { newArr[0] && ({ setModal(true); }) };
     }, 1000);
   }
 
@@ -50,6 +49,7 @@ function Lib({ data, setFocus, setData }) {
           <div><span>Отсортировать по количеству библиотек</span>
             <button onClick={() => { sortElMax() }}>&#9650;</button>
             <button onClick={() => { sortElMin() }}>&#9660;</button>
+            <button onClick={() => { setData(oldData) }}>Все</button>
           </div>
           <div><span>Введите регион</span>
             <input onChange={inputChange} value={word} />

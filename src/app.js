@@ -10,10 +10,12 @@ import Home from './components/Home';
 
 export default function App() {
   const [data, setData] = useState([]);
+  const [oldData, setOldData] = useState([]);
   const [focus, setFocus] = useState({ focusHome: true, focusInfo: false });
 
   useEffect(() => {
     getData().then(setData);
+    getData().then(setOldData);
   }, []);
 
   return (
@@ -22,7 +24,7 @@ export default function App() {
         <Header focus={focus} />
         <Switch>
           <Route path="/lib">
-            <Lib data={data} setFocus={setFocus} setData={setData} />
+            <Lib data={data} setFocus={setFocus} setData={setData} oldData={oldData} setOldData={setOldData}/>
           </Route>
           <Route path="/">
             <Home setFocus={setFocus} />
